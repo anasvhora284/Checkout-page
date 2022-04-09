@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
     <title>Checkout example using bootstrap</title>
   </head>
-  <body>
+
+  <body style="background-color: #F8F9FA;">
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -21,11 +22,207 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
       <div class="header">
-        <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" style="height: 70px; width: 70px;">
+        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" style="height: 70px; width: 70px;">
         <h2>Checkout form</h2>
         <p>
           Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
         </p>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <h3>Billing address</h3>
+            
+            <div class="row">
+              <div class="col-6 mb-3">
+                <label for="First name" class="form-label">First name</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-6 mb-3">
+                <label for="Last name" class="form-label">Last name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <label for="">Username</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" placeholder="you@emample.com" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label>Address</label>
+              <input type="text" placeholder="123 Main St" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Address<span class="text-muted">(Optional)</span></label>
+              <input type="text" placeholder="Apartment or suite" class="form-control">
+            </div>
+            <div class="row">
+              <div class="col-5 mb-3">
+                <label>Country</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected> <span class="text-muted">Choose</span> </option>
+                  <option value="1">United States</option>
+                  <option value="2">India</option>
+                </select>
+              </div>
+              <div class="col-4 mb-3">
+                <label>State</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected> <span class="text-muted">Choose</span> </option>
+                  <option value="1">California</option>
+                  <option value="2">Gujrat</option>
+                </select>
+              </div>
+              <div class="col-3 mb-3">
+                <label>Zip</label>
+                <input type="text"class="form-control">
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Shipping address is the same as my billing address
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Save this information for next time
+              </label>
+            </div>
+
+              <hr>
+
+              <div class="payment mt-4 mb-3">
+                <h4>Payment</h4>
+
+                <div class="form-check mt-3">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Credit card
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Debit card
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Paypal
+                  </label>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Name on card</label>
+                      <input type="text" class="form-control">
+                      <div id="emailHelp" class="form-text">Full name as displayed on card.</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label class="form-label">Credit card number</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col-3">
+                    <label>Expiration</label>
+                    <input class="form-control" type="text">
+                  </div>
+                  <div class="col-3">
+                    <label>CVV</label>
+                    <input class="form-control" type="text">
+                  </div>
+                </div>
+
+                <hr>
+
+                <button class="btn btn-primary checkout_button w-100">Continue to checkout</button>
+                
+
+              </div>
+
+          </div>
+
+          <div class="col-4">
+            <div class="cart mb-3">
+            <b class="text-muted cart_text">Your Cart</b>
+            <span class="badge rounded-pill bg-secondary">3</span>
+            </div>
+
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-0">Product name</h5>
+                  <small>$12</small>
+                </div>
+                <small class="text-muted">Brief description</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-0">Second Product</h5>
+                  <small>$8</small>
+                </div>
+                <small class="text-muted">Brief description</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-0">Third item</h5>
+                  <small>$5</small>
+                </div>
+                <small class="text-muted">Brief description</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-0 text-success">Promo code</h5>
+                  <small class="text-success">-$5</small>
+                </div>
+                <small class="text-success">EXAMPLECODE</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <p class="m-1">Total (USD)</p>
+                  <b>$20</b>
+                </div>
+              </a>
+            </div>
+
+              <a href="#" class="list-group-item list-group-item-action mt-3" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <button type="button" class="btn btn-secondary redeem-button">Redeem</button>
+                </div>
+              </a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&#169; 2017-2018 Company Name</p>
+        <div class="footer-link-div">
+          <a href="#" class="link-primary">Privacy</a> &nbsp;
+          <a href="#" class="link-primary">Terms</a> &nbsp;
+          <a href="#" class="link-primary">Support</a>
+        </div>
       </div>
 
   </body>

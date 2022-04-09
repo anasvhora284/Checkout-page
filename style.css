@@ -1,0 +1,14 @@
+.header {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: 5% auto 5% auto;
+}
+
+.header p {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+}
